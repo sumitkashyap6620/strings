@@ -1,2 +1,1 @@
-   System.out.println("given matrix is :-");
-//   displaymatrix(arr);
+arr[i][j] = arr[i][j] + arr[i][k] ;

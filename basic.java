@@ -8,6 +8,31 @@ public static void displaymatrix(int mat[][]){
         System.out.println();
     }
 }
+public static int[][] rotation(int arr[][]){
+ arr = transpose(arr);
+ for (int i = 0 ; i < arr.length ; i++){
+    int j = 0 ; 
+    int k = arr.length-1;
+    while(j<k){
+        arr[i][j] = arr[i][j] + arr[i][k] ;
+        arr[i][k] = arr[i][j] - arr[i][k] ;
+         arr[i][j] = arr[i][j] - arr[i][k] ;
+         j++;
+         k--;
+    }
+ }
+ return arr ;
+}
+public static int[][] transpose(int arr[][]){
+    for (int i = 0 ; i < arr.length ; i++){
+        for(int j = i+1 ; j < arr[0].length ; j++ ){
+             arr[i][j] = arr[j][i] + arr[i][j];
+             arr[j][i] = arr[i][j] - arr[j][i];
+             arr[i][j] = arr[i][j] - arr[j][i];
+        }
+}
+return arr ;
+}
     public static void main(String[] args) {
     System.out.print("Rows : ");
     Scanner sc = new Scanner (System.in);
@@ -23,5 +48,10 @@ public static void displaymatrix(int mat[][]){
         
     System.out.println("given matrix is :-");
   displaymatrix(arr);
+//   System.out.println("transpose of matrix :-");
+//   displaymatrix(transpose(arr));
+   System.out.println("90* Rotation of matrix :-");
+   displaymatrix(rotation(arr));
+   sc.close();
 }
 }
