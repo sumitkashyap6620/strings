@@ -35,6 +35,12 @@ public class basic{
     //ystem.out.println(s.indexOf("m"));
 
     //System.out.println(s.indexOf("sumit"));
+    String p = "sumit" ;
+    
+    s = s.substring(2);
+    s = "A"+s;
+    System.out.println(s);
+    System.out.println(p);
  }
 }
 
