@@ -1,1 +1,0 @@
-arr[i][j] = arr[i][j] + arr[i][k] ;
