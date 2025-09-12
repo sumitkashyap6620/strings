@@ -8,7 +8,11 @@ public class solution{
                 char c = (char) x ;
                  sb.setCharAt(i,c);
             }
-        }
+        }int i = 0 ;
+         if(i==0 || sb.charAt(i-1) == ' '){
+               int x = 32 ;
+                sb.setCharAt(i,(char)x);
+            } 
         s = sb.toString() ;
       return s ;
     }
