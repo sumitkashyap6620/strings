@@ -5,6 +5,10 @@ public class Student {
     int sr ;
     double percent ;
     
+    // final keyword ]
+
+    final String schoolname = "VPS" ; // it can never change by anything like setor etc
+
     // Constructor 
 
      public Student(){} // default constructor 
@@ -25,4 +29,7 @@ public class Student {
     public void setroll(int roll){
    this.roll = roll ;
     }
+   //  public void setroll(String sn){
+//    schoolname = sn ;
+//     }
 }
